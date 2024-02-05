@@ -1,0 +1,88 @@
+:root{
+    --lower-font:16px;
+    --big-font:20px;
+    --middle-font:18px;
+    --lowerst-font:14px;
+    --high-height:34px;
+    --middle-height:30px;
+    --lower-height:24px;
+    --lowerst-height:22px;
+    --mono_point:#111111;
+    --mono_main:#4e4e4e;
+    --mono_sub:#828282;
+    --mono_dea:#bbbbbb;
+    --mono_line:#e2e2e2;
+    --mono_back:#f9f9f9;
+    --main_color:#115c5e;
+    --sub_color:#4a8b8d;
+    --sub_se_color:#daeced;
+    --sub_point_color:#e4b04c;
+    --influ:#D4E5E4;
+
+    /*모바일 폰트*/
+    --m_main_font:1.2rem; 
+    --m_ma_font:0.9rem;
+    --m_sub_font:0.8rem;
+    --m_middle_font:0.7rem;
+    --m_lower_font:0.6rem;
+    --m_lowerst_font:0.55rem;
+
+    /*모바일 추가 컬러*/
+    --m_mono_color:#D8D8D8;
+}
+/*font-size*/
+.lower-font{font-size:var(--lower-font);line-height:var(--lower-height);}
+.lowerst-font{font-size:var(--lowerst-font);line-height:var(--lowerst-height);}
+.middle-font{font-size:var(--middle-font);line-height:var(--middle-height);}
+.big-font{font-size:var(--big-font);line-height:var(--high-height);}
+
+/*
+    Defult Setting
+*/
+div {
+    box-sizing: border-box;
+    /*모든 Div의 구조는 border-box기준으로 확립. div의 정해진 크기 밖으로 움직이는 것은 margin 뿐이며 그외는 전부 div안으로 영역을 차지하게 설정*/
+  }
+  
+  ul {
+    box-sizing: border-box;
+    /*Ul 동일하게 처리*/
+    list-style: none;
+  }
+  input {
+    vertical-align: middle;
+    outline: none;
+    font-weight: 300;
+    font-family: 'Pretendard';
+    font-size: var(--drkid-lower-font);
+    line-height: var(--drkid-lower-height);
+}
+
+input[type="text"],
+input[type="password"] {
+  -webkit-appearance: none
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+input:checked[type="checkbox"] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}

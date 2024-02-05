@@ -1,0 +1,806 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<title>허정현</title>
+		<!-- css -->
+		<!-- <link rel="stylesheet" href="css/root.css"/> -->
+		<link rel="stylesheet" href="css/masterr.css"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+		<!-- JS -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="js/zoomsl.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		
+		<!-- t2 세팅 -->
+		<meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: content:"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"/>
+		<meta name="theme-color" content="#fff"/>
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="msapplication-tap-highlight" content="no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<style>
+			/* COMMON */
+			#sub_content {
+			   /* padding: 7rem 0; */
+			   padding: 7rem 0 0 0;
+			   position: relative;
+			   z-index: 1;
+		   }
+		   .sub_layout {
+			   /* width: 95rem;
+			   max-width: 100%;
+			   margin: 0 auto;
+			   position: relative;
+			   height: 100%; */
+		   }
+		   #content {
+				/* max-width: 1300px;
+				margin: auto; */
+			}
+		   .main_Box {
+			   /* padding: 0px 20px;
+			   max-width: 1340px;
+			   margin: 0 auto; */
+			    width: 100%;
+				min-width: 320px;
+				text-align: center;
+				margin: 0 auto;
+				padding: 1rem 0.8rem;
+		   }
+		   /* 색상 */
+		   .bg_gray{
+				background: #e7e7e7;
+		   }
+		   .bg_darkgr{
+				background:#367883;
+		   }
+		   .bg_dark{background:#383939;}
+		   .col_while{
+				color: #ffffff;
+		   }
+		   .col_point{color: #ef7318;}
+		   img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+		   }
+		   /* 내용 */
+
+		   /* About Me */
+		   .main_Title {
+				display: flex;
+				margin: 0 auto;
+				justify-content: center;
+				align-items: center;
+				gap: 0rem 1rem;
+			}
+			.title_Txt {
+				font-size: 4rem;
+			}
+			.icon{
+				font-size: 3rem;
+			}
+			.me_Info_Area {
+				max-width: 1100px;
+				min-width: 300px;
+				margin: 0 auto;
+				padding: 40px 20px;
+				background-color: #fff;
+				border-radius: 4px;
+				box-shadow: 0px 0px 19px rgba(0,0,0,0.2);
+			}
+			.me_Info {
+				display: flex;
+				gap: 0px 15px;
+				max-width: 300px;
+				padding: 0px 0px 0px 20px;
+			}
+			.me_Info_Grid{
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 0 0;
+				gap: 10px 220px;
+			}
+			.info_Icon{
+				padding: 10px 0px;
+			}
+			.info_Txt_Area{}
+			.info_Txt_1{
+				text-align: left;
+				font-weight: 600;
+				font-size: 2rem;
+			}
+			.info_Txt_2{
+				font-weight: 500;
+				font-size: 1.5rem;
+			}
+			#phone_Num:hover{
+				color:#ef7318;
+			}
+			#email:hover{
+				color:#ef7318;
+			}
+			#phone_Num,#email{
+				cursor: pointer;
+			}
+			/* Skills */
+			.skills_Area {
+				display: flex;
+				display: -ms-flexbox;
+				flex-flow: column wrap;
+				align-content: space-around;
+				-ms-flex-line-pack: distribute;
+				height: calc(100% - (1.5rem + 1px));
+			}
+			.skills_box {
+				max-width: 1000px;
+				min-width: 300px;;
+				padding: 3rem;
+				margin: 0 auto 2rem;
+				border-radius: 1rem;
+				background-color: #fff;
+				box-shadow: 1rem 1rem 1rem 0 rgba(68,68,68,.2);
+			
+			}
+			.skills_Title_Wrap {
+				padding: 0rem 0rem 2.5rem 0rem;
+			}
+			.skills_Title {
+				font-size: 2.5rem;
+				font-weight: 600;
+				width: fit-content;
+				margin: 0 auto;
+				border-bottom:1.4px solid #fb9073
+			}
+			.skills_Wrap{
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				gap:1rem;
+				justify-content: center;
+			}
+			.skills {
+				width: 100px;
+				height: 100px;
+			}
+			.skills_Long{
+				width: 215px;
+				height: 70px;
+			}
+			.skills_img{
+				object-fit: contain;
+			}
+			/* Projects */
+			.pj_Area{ padding: 0rem 0.5rem;}
+			.pj_box {
+				max-width: 1100px;
+				min-width: 280px;
+				padding: 3rem;
+				margin: 0 auto 2rem;
+				border-radius: 1rem;
+				background-color: #fff;
+				display: flex;
+			}
+			.pj_left{
+				width: 70%;
+			}
+			.pj_right{
+				width: 30%;
+				padding: 1rem 0.5rem;
+    			/* display: grid; */
+			}
+			.pj_title {
+				font-size: 1.5rem;
+				font-weight: 600;
+				padding: 0rem 0rem 1.5rem 0rem;
+			}
+			.pj_info {
+				font-size: 1.4rem;
+				padding: 1rem 0rem 1rem 0rem;
+			}
+			.pj_border_bottom{
+				border-bottom: 1.4px solid #367883;
+			}
+
+			/* Certificate&Archiving */
+		   .licence_Box{
+				max-width: 850px;
+				min-width: 300px;
+				display: flex;
+				justify-content: space-between;
+				margin: 0 auto;
+		   }
+		   .licence_Img_Area{
+				max-width: 400px;
+				min-width: 280px;
+				max-height: 600px;
+				border-radius: 4px;
+				box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+		   }
+		   .licence_Info_Area{
+				max-width: 400px;
+				min-width: 300px;
+				display: grid;
+				place-content: center;
+				place-items: center;
+				transform: translateY(10%);
+				transition: all 0.3s ease-in-out;
+		   }
+		   .licence_txt{
+				padding: 2rem 0;
+				font-size: 32px;
+				font-weight: 700;
+		   }
+		   /* SWIPER */
+		   .swiper {
+				max-width: 650px;
+				min-width: 260px;
+				max-height: 450px;
+				padding: 2rem 0rem;
+			}
+
+			.swiper-slide {
+				text-align: center;
+				font-size: 18px;
+				background: #fff;
+				display: flex !important;
+				justify-content: center;
+				align-items: center;
+				 max-height: 385px;
+			}
+			.swiper-slide img {
+				display: flex;
+				width: 90%;
+				height: 90%;
+				object-fit: fill;
+			}
+			.swiper-button-next, .swiper-button-prev {
+				--swiper-theme-color: rgb(129, 132, 134);
+			}
+			.swiper-pagination-bullet-active {
+				background-color:  rgb(129, 132, 134) !important;
+			}
+			.archiving_Area {
+				padding: 4rem 0rem;
+				/* margin: 0 auto; */
+			}
+			.archiving_Box {
+				max-width: 600px;
+				min-width: 290px;
+				background: #ffffff;
+				margin: 0 auto;
+				padding: 2rem;
+				border-radius: 1rem;
+				display: flex;
+				gap: 0rem 2.5rem;
+				cursor: pointer;
+				justify-content: center;
+			}
+			.archiving_Box:hover{
+				transform: translateY(-2%);
+				transition: all 0.3s ease-in-out;
+			}
+			.archiving_Box:hover .archiving_Title {
+				color: #4272ff;
+				transition: all 0.3s ease-in-out;
+			}
+			.archiving_Info_Area {
+				text-align: left;
+			}
+			.archiving_Img_Wrap {
+				width: 100px;
+				height: 100px;
+				margin: 0 auto;
+			}
+			.archiving_Title {
+				 font-size: 2.3rem;
+				 font-weight: 600;
+				 /* color: #4272ff; */
+			}
+			.archiving_Info {
+				font-size: 2rem;
+			}
+			/* footer */
+			.footer{
+				background: #383939;
+				border-top: 1px solid #d5d3d3;
+			}
+			.footer_Contents_Wrap {
+				padding: 1rem;
+			}
+			.footer_Contents {
+				display: flex;
+				justify-content: center;
+			}
+			.footer_Logo_Wrap {
+				max-width: 100px;
+				max-height: 100px;
+				min-width: 80px;
+				min-height: 80px;
+				background: #fff;
+				border-radius: 7.5rem;
+			}
+			.footer_Info {
+				text-align: center;
+				color: #fff;
+				font-weight: 500;
+				font-size: 1.8rem;
+			}
+
+
+			/* 미디어 쿼리 */
+			@media screen and (max-width:860px) {
+				.inner_header_data {display: none;}
+				.header_Menu{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+
+			@media screen and (max-width:1070px) {
+				.me_Info_Grid {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+			@media screen and (max-width:670px) {
+				.me_Info_Grid {
+					grid-template-columns: repeat(1, 1fr);
+				}
+			}
+			@media screen and (max-width:1000px) {
+				.pj_box {
+					display: block;
+				}
+				.pj_left {
+					width: 100%;
+				}
+				.pj_right {
+					width: 100%;
+				}
+			}
+			@media screen and (max-width:740px) {
+				.licence_Box {display: block;}
+				.licence_Img_Area{margin: 0 auto;}
+				.licence_Info_Area{margin: 0 auto;}
+			}
+			@media screen and (max-width:400px) {
+				.pj_box{padding: 1rem;}
+			}
+			@media screen and (max-width:505px) {
+				.icon {font-size: 2rem;}
+				.title_Txt {font-size: 3rem;}
+			}
+			@media screen and (max-width:386px) {
+				.title_Txt {font-size: 2rem;}
+				.main_Title{display: block;}
+				.skills_box{padding: 2rem;}
+			}
+			@media screen and (max-width:520px) {
+				.archiving_Box{display: block;}
+				.archiving_Title{font-size: 1.8rem;}
+				.archiving_Info {font-size: 1.5rem;}
+				.archiving_Area{padding:2rem 0rem ;}
+				.footer_Info{font-size: 1.3rem;}
+			}
+		</style>
+
+		<script>
+			function checkVisible( element, check = 'above' ) {
+			const viewportHeight = $(window).height(); // Viewport Height
+			const scrolltop = $(window).scrollTop(); // Scroll Top
+			const y = $(element).offset().top;
+			const elementHeight = $(element).height();   
+			// 반드시 요소가 화면에 보여야 할경우
+			if (check == "visible") 
+			return ((y < (viewportHeight + scrolltop)) && (y > (scrolltop - elementHeight)));
+			// 화면에 안보여도 요소가 위에만 있으면 (페이지를 로드할때 스크롤이 밑으로 내려가 요소를 지나쳐 버릴경우)
+			if (check == "above") 
+			return ((y < (viewportHeight + scrolltop)));
+		}
+		// 리소스가 로드 되면 함수 실행을 멈출지 말지 정하는 변수
+		let isVisible = false;
+		// 이벤트에 등록할 함수
+		const func = function () {
+			if ( !isVisible && checkVisible('#Certificate_Target') ) {
+				$(".licence_Info_Area").css("transform", "translateY(0%)")
+				isVisible = true;
+			}
+			// 만일 리소스가 로드가 되면 더이상 이벤트 스크립트가 있을 필요가 없으니 삭제
+			isVisible && window.removeEventListener('scroll', func);
+		}
+		// 스크롤 이벤트 등록
+		window.addEventListener('scroll', func);
+		var is_Mobile_Menu= false;
+			 $(document).ready(function () {
+				// 마스터 헤더, 푸터 로드
+				// $("#content-placeholder").load("master.html #header");
+
+				//자격증사진 hover 시 확대
+				if ($(window).width() >= 770) {
+               		 // pc에서만 동작
+					$('#zoom').imagezoomsl({
+					zoomrange: [2, 2], //가로 세로 분할 수
+					zoomspeedanimate: 10,
+					});
+            	}
+				//깃 저장소 영역 클릭
+				$("#archiving_Box").on('click',function(){
+					var url = $(this).find(".archiving_Title").data("url");
+					location.href= url;
+				});
+				//헤더 메뉴 클릭
+				$(".inner_header_data").on('click',function(){
+					var location = $(this).data("location");
+					var headerHeight = $('#header').outerHeight();
+					$('html, body').animate({
+						scrollTop: $("#" + location).offset().top -headerHeight
+					}, 800);
+				});
+				$(".inner_header_logo_wrap").on('click',function(){
+					var headerHeight = $('#header').outerHeight();
+					$('html, body').animate({
+						scrollTop: $("#About_Me").offset().top -headerHeight
+					}, 800);
+				});
+				//모바일 헤더 메뉴 클릭
+				$(".header_Menu").on('click',function(){
+					if(!is_Mobile_Menu){
+						 $("#mobile_header").show();
+				
+						is_Mobile_Menu=!is_Mobile_Menu;
+					}
+					else{
+						$("#mobile_header").hide()
+						is_Mobile_Menu=!is_Mobile_Menu;
+					}
+				});
+
+				
+				$(".mobile_header_data").on('click',function(){
+					var location = $(this).data("location");
+					var headerHeight = $('#header').outerHeight()-$('#mobile_header').outerHeight();
+					$('html, body').animate({
+						scrollTop: $("#" + location).offset().top -headerHeight
+					}, 800);
+					$("#mobile_header").hide()
+						is_Mobile_Menu=false;
+				});
+				 
+
+			 });
+
+			 
+				
+		</script>
+	</head>
+	<body>
+		<!-- 마스터 헤더 -->
+		<!-- <div id="content-placeholder"></div> -->
+		<div id="header">
+			<div id="inner_header">
+				<div class="inner_header_logo_wrap" style="cursor:pointer;">
+					<img src="image/logo.svg" alt="로고">
+				</div>
+				<div class="inner_header_data_wrap">
+					<div class="inner_header_data header-font" data-location="About_Me">About Me</div>
+					<div class="inner_header_data header-font" data-location="skills">Skills</div>
+					<div class="inner_header_data header-font" data-location="Projects">Projects</div>
+					<div class="inner_header_data header-font" data-location="Certificate">Certificate&Archiving</div>
+					<div class="header_Menu header-font" >
+						<span class="material-symbols-outlined" style="color:#bdbdbd ;">menu</span>
+					</div>
+				</div>
+			</div>
+			<div id="mobile_header">
+				<div class="mobile_header_data header-font" data-location="About_Me">About Me</div>
+				<div class="mobile_header_data header-font" data-location="skills">Skills</div>
+				<div class="mobile_header_data header-font" data-location="Projects">Projects</div>
+				<div class="mobile_header_data header-font" data-location="Certificate">Certificate&Archiving</div>
+			</div>
+		</div>
+
+		<!-- 메인내용 -->
+		<div id="sub_content">
+			<div class="sub_layout">
+				<div id="content">
+					<!-- ABOUT ME -->
+					<div class="main_Box " id="About_Me">
+						<div class="main_Title">
+							<div class="title_Icon"><span class="material-symbols-outlined icon">content_paste_search</span></div>
+							<div class="title_Txt font_weight_600">About Me</div>
+						</div>
+						<div class="me_Info_Area">
+							<div class="me_Info_Grid">
+								<!-- 이름 -->
+								<div class="me_Info">
+									<div class="info_Icon"><span class="material-symbols-outlined">
+										person
+										</span></div>
+									<div class="info_Txt_Area">
+										<div class="info_Txt_1">이름</div>
+										<div class="info_Txt_2">허정현</div>
+									</div>
+								</div>
+								<!-- 생년월일 -->
+								<div class="me_Info">
+									<div class="info_Icon"><span class="material-symbols-outlined">
+										cake
+										</span></div>
+									<div class="info_Txt_Area">
+										<div class="info_Txt_1">생년월일</div>
+										<div class="info_Txt_2">98.06.12</div>
+									</div>
+								</div>
+								<!-- 주소지 -->
+								<div class="me_Info">
+									<div class="info_Icon"><span class="material-symbols-outlined">
+										my_location
+										</span></div>
+									<div class="info_Txt_Area">
+										<div class="info_Txt_1">주소지</div>
+										<div class="info_Txt_2">부산광역시 동래구</div>
+									</div>
+								</div>
+								<!-- 전화번호 -->
+								<div class="me_Info">
+									<div class="info_Icon"><span class="material-symbols-outlined">
+										Call
+										</span></div>
+									<div class="info_Txt_Area">
+										<div class="info_Txt_1">전화번호</div>
+										<div class="info_Txt_2" id="phone_Num" onclick="document.location.href='tel:010-2982-3759'">010-2982-3759</div>
+									</div>
+								</div>
+								<!-- 이메일 -->
+								<div class="me_Info">
+									<div class="info_Icon"><span class="material-symbols-outlined">
+										Mail
+										</span></div>
+									<div class="info_Txt_Area">
+										<div class="info_Txt_1">이메일</div>
+										<div class="info_Txt_2"id="email" onclick="document.location.href='mailto:gjgmlwjd9@gmail.com'">gjgmlwjd9@gmail.com</div>
+									</div>
+								</div>
+								<!-- 학력 -->
+								<div class="me_Info">
+									<div class="info_Icon"><span class="material-symbols-outlined">
+										School
+										</span></div>
+									<div class="info_Txt_Area">
+										<div class="info_Txt_1">학력</div>
+										<div class="info_Txt_2">동의대학교 컴퓨터공학부</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Skils -->
+					<div class="main_Box bg_gray" id="skills">
+						<div class="main_Title">
+							<div class="title_Icon"><span class="material-symbols-outlined icon">done</span></div>
+							<div class="title_Txt font_weight_600">Skills</div>
+						</div>
+						<div class="skills_Area">
+							<!-- 프론트 -->
+							<div class="skills_box">
+								<div class="skills_Title_Wrap">
+									<div class="skills_Title">Frontend</div>
+								</div>
+								<div class="skills_Wrap">
+									<div class="skills">
+										<img src="image/Skills/html.svg" class="skills_img">
+									</div>
+									<div class="skills">
+										<img src="image/Skills/css.svg" class="skills_img">
+									</div>
+									<div class="skills">
+										<img src="image/Skills/js.png" class="skills_img">
+									</div>
+									<div class="skills_Long">
+										<img src="image/Skills/jquery.svg" class="skills_img">
+									</div>
+									<div class="skills">
+										<img src="image/Skills/bs.svg" class="skills_img">
+									</div>
+								</div>
+							</div>
+							<!-- 백 -->
+							<div class="skills_box">
+								<div class="skills_Title_Wrap">
+									<div class="skills_Title">Backend</div>
+								</div>
+								<div class="skills_Wrap">
+									<div class="skills">
+										<img src="image/Skills/c.png" class="skills_img">
+									</div>
+									<div class="skills">
+										<img src="image/Skills/java.png" class="skills_img">
+									</div>
+									<div class="skills">
+										<img src="image/Skills/mysql.png" class="skills_img">
+									</div>
+								</div>
+							</div>
+							<!-- 배포 -->
+							<div class="skills_box">
+								<div class="skills_Title_Wrap">
+									<div class="skills_Title">Deployment</div>
+								</div>
+								<div class="skills_Wrap">
+									<div class="skills">
+										<img src="image/Skills/aws.svg" class="skills_img">
+									</div>
+									<div class="skills_Long">
+										<img src="image/Skills/firebase.svg" class="skills_img">
+									</div>
+									<div class="skills_Long">
+										<img src="image/Skills/iis.png" class="skills_img">
+									</div>
+								</div>
+							</div>
+							<!-- 버전관리 -->
+							<div class="skills_box">
+								<div class="skills_Title_Wrap">
+									<div class="skills_Title">Version Control</div>
+								</div>
+								<div class="skills_Wrap">
+									<div class="skills_Long">
+										<img src="image/Skills/tortoise.png" class="skills_img">
+									</div>
+									<div class="skills_Long">
+										<img src="image/Skills/git.png" class="skills_img">
+									</div>
+									<div class="skills">
+										<img src="image/Skills/git_hub.png" class="skills_img">
+									</div>
+								</div>
+							</div>
+							<!-- 모바일 -->
+							<div class="skills_box">
+								<div class="skills_Title_Wrap">
+									<div class="skills_Title">Mobile App</div>
+								</div>
+								<div class="skills_Wrap">
+									<div class="skills_Long">
+										<img src="image/Skills/cordova.png" class="skills_img">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<!-- 프로젝트 -->
+					<div class="main_Box bg_darkgr" id="Projects">
+						<div class="main_Title">
+							<div class="title_Icon"><span class="material-symbols-outlined icon col_while">content_paste</span></div>
+							<div class="title_Txt font_weight_600 col_while">Projects</div>
+						</div>
+						<div class="pj_Area">
+							<!-- 1 -->
+							<div class="pj_box">
+								<div class="pj_left">
+									<div class="swiper mySwiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_1.png"></div>
+											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_2.png"></div>
+											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_3.png"></div>
+											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_4.png"></div>
+											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_5.png"></div>
+										</div>
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+								<div class="pj_right">
+									<div class="pj_title">네트워크 마케팅 쇼핑몰 웹 개발<br/>(클라이언트,관리자)</div>
+									<div class="pj_info">주요작업(클라이언트) : 상품상세, 상품리뷰, 이벤트, 마이페이지 작업</div>
+									<div class="pj_info pj_border_bottom">주요작업(관리자) : 메인 대쉬보드,전시 카테고리 관리,회원관리 페이지 작업</div>
+									
+									<div class="pj_info">쇼핑몰 특성상 여러 DB table에 접근해 작업할 수 있어서 sql에 능숙해질 수 있었고 기본적인 CRUD부터
+										사용자 입력에 따른 Multi Record를 효율적인 방법으로 Insert&Update 했던 경험이 기억에 남습니다.
+									</div>
+								</div>
+							</div>
+							<!-- 2 -->
+							<div class="pj_box">
+								<div class="pj_left">
+									<div class="swiper mySwiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_1.png"></div>
+											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_2.png"></div>
+											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_3.png"></div>
+											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_4.png"></div>
+										</div>
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+								<div class="pj_right">
+									<div class="pj_title">물류 서비스 웹 리뉴얼</div>
+									<div class="pj_info pj_border_bottom">주요작업 : 메인, 물류 서비스 소개, 스케줄 검색 페이지 작업</div>
+									<div class="pj_info">기존 웹을 리뉴얼 해보면서 UI/UX와 공통코드관리의 중요성을 체감할 수 있었고 Media Query를 통해
+										반응형 작업을 경험했습니다.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 자격증 -->
+					<div class="main_Box bg_dark" id="Certificate">
+						<div class="main_Title">
+							<div class="title_Icon"><span class="material-symbols-outlined icon col_while">credit_score</span></div> 
+							<div class="title_Txt font_weight_600 col_while">Certificate & Archiving</div>
+						</div>
+						<div class="licence_Box">
+							<div class="licence_Img_Area">
+								<img src="image/licence_1.jpg" id="zoom" alt="">
+							</div>
+							<div class="licence_Info_Area">
+								<div class="licence_txt col_while">자격종목 : 정보처리기사</div>
+								<div class="licence_txt col_while" >합격 연월일 : 2022.11.25</div>
+								<div class="licence_txt col_while"id="Certificate_Target">발급 연월일 : 2022.11.30</div>
+							</div>
+						</div>
+						<!--  -->
+						<div class="archiving_Area">
+							<div class="archiving_Box" id="archiving_Box">
+								<div class="archiving_Img_Wrap">
+									<img class="archiving_Img" src="image/Skills/git_hub.png">
+								</div>
+								<div class="archiving_Info_Area">
+									<div class="archiving_Title" data-url="https://github.com/Jung-Hey">https://github.com/Jung-Hey</div>
+									<div class="archiving_Info"><span class="col_point">깃허브 </span>소스코드 저장소입니다.</div>
+									<div class="archiving_Info">■ 프로젝트, 프로그램의 소스</div>
+									<div class="archiving_Info">■ 혼자서 공부하는 알고리즘 소스</div>
+								</div>
+								
+							</div>
+						</div>
+						
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="footer_Contents_Wrap">
+				<div class="footer_Contents">
+			
+				</div>
+				<div class="footer_Info">© 2024. Heo Jung Hyeon. All rights reserved.</div>
+			</div>
+		</footer>
+	</body>
+	
+</html>
+
+<script>
+	// var swiper = new Swiper(".mySwiper", {
+    //   cssMode: true,
+    //   navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev",
+    //   },
+    //   pagination: {
+    //     el: ".swiper-pagination",
+    //   },
+    //   mousewheel: true,
+    //   keyboard: true,
+    // });
+	var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+	  }});
+	
+</script>
