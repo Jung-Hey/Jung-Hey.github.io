@@ -9,7 +9,6 @@
 		<meta property="og:description" content="허정현의 포트폴리오 입니다.">
 		<title>허정현</title>
 		<!-- css -->
-		<!-- <link rel="stylesheet" href="css/root.css"/> -->
 		<link rel="stylesheet" href="css/masterr.css"/>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,14 +16,12 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
-
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
 		<!-- JS -->
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="js/zoomsl.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-		
 		<!-- t2 세팅 -->
 		<meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: content:"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"/>
@@ -259,13 +256,12 @@
 			.pj_border_bottom{
 				border-bottom: 1.4px solid #367883;
 			}
-
 			/* Certificate&Archiving */
 		   .licence_Box{
 				max-width: 850px;
 				min-width: 300px;
 				display: flex;
-				justify-content: space-between;
+				justify-content: space-around;
 				margin: 0 auto;
 		   }
 		   .licence_Img_Area{
@@ -484,9 +480,6 @@
 		$(document).ready(function () {
 			//메인 타이핑 효과
 			typing();
-			// 마스터 헤더, 푸터 로드
-			// $("#content-placeholder").load("master.html #header");
-
 			//자격증사진 hover 시 확대
 			if ($(window).width() >= 770) {
 					// pc에서만 동작
@@ -535,12 +528,7 @@
 				$("#mobile_header").hide()
 					is_Mobile_Menu=false;
 			});
-				
-
 		});
-
-			 
-				
 		</script>
 	</head>
 	<body>
@@ -568,7 +556,6 @@
 				<div class="mobile_header_data lowerst-font" data-location="Certificate">Certificate&Archiving</div>
 			</div>
 		</div>
-
 		<!-- 메인내용 -->
 		<div id="sub_content">
 			<div class="sub_layout">
@@ -576,7 +563,7 @@
 					<!-- MP4메인 -->
 					<div class="mp_Main_Area">
 						<div class="mp_Main">
-							<video class="mp" src="/mp4/main.mp4" autoplay="" loop="" muted="" playsinline></video>
+							<video class="mp" src="/mp4/main.mp4"  autoplay="" loop="" muted playsinline ></video>
 						</div>
 						<div class="mp_Txt_area">
 							<div class="mp_Txt">허정현의 포트폴리오 입니다</div>
@@ -749,9 +736,6 @@
 							</div>
 						</div>
 					</div>
-
-
-
 					<!-- 프로젝트 -->
 					<div class="main_Box bg_darkgr" id="Projects">
 						<div class="main_Title">
@@ -764,11 +748,11 @@
 								<div class="pj_left">
 									<div class="swiper mySwiper">
 										<div class="swiper-wrapper">
-											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_1.png"></div>
-											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_2.png"></div>
-											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_3.png"></div>
-											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_4.png"></div>
-											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_5.png"></div>
+											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_1.png" loading="lazy"></div>
+											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_2.png" loading="lazy"></div>
+											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_3.png" loading="lazy"></div>
+											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_4.png" loading="lazy"></div>
+											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_5.png" loading="lazy"></div>
 										</div>
 										<div class="swiper-pagination"></div>
 									</div>
@@ -788,10 +772,10 @@
 								<div class="pj_left">
 									<div class="swiper mySwiper">
 										<div class="swiper-wrapper">
-											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_1.png"></div>
-											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_2.png"></div>
-											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_3.png"></div>
-											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_4.png"></div>
+											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_1.png" loading="lazy"></div>
+											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_2.png" loading="lazy"></div>
+											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_3.png" loading="lazy"></div>
+											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_4.png" loading="lazy"></div>
 										</div>
 										<div class="swiper-pagination"></div>
 									</div>
@@ -837,10 +821,7 @@
 								
 							</div>
 						</div>
-						
-
 					</div>
-
 				</div>
 			</div>
 		</div>
@@ -857,24 +838,11 @@
 </html>
 
 <script>
-	// var swiper = new Swiper(".mySwiper", {
-    //   cssMode: true,
-    //   navigation: {
-    //     nextEl: ".swiper-button-next",
-    //     prevEl: ".swiper-button-prev",
-    //   },
-    //   pagination: {
-    //     el: ".swiper-pagination",
-    //   },
-    //   mousewheel: true,
-    //   keyboard: true,
-    // });
 	var swiper = new Swiper(".mySwiper", {
       pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
 	  }});
-
 	//타이핑 효과 함수 
 	var typingBool = false; 
 	var typingIdx=0; 
