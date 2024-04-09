@@ -220,7 +220,7 @@
 			}
 			.skills_Long{
 				width: 215px;
-				height: 70px;
+				height: 90px;
 			}
 			.skills_img{
 				object-fit: contain;
@@ -230,11 +230,14 @@
 			.pj_box {
 				max-width: 1100px;
 				min-width: 280px;
-				padding: 3rem;
+				padding: 2rem 3rem;
 				margin: 0 auto 2rem;
 				border-radius: 1rem;
 				background-color: #fff;
+			}
+			.pj_layoyt{
 				display: flex;
+				align-items: center;
 			}
 			.pj_left{
 				width: 70%;
@@ -244,13 +247,25 @@
 				padding: 1rem 0.5rem;
     			/* display: grid; */
 			}
+			.pj_topTitle{
+				padding: 0 0 0.5rem 0;
+				font-size: 1.4rem;
+				color: #8f8f8f;
+				font-weight: 600;
+			}
 			.pj_title {
-				font-size: 1.5rem;
+				font-size: 1.3rem;
 				font-weight: 600;
 				padding: 0rem 0rem 1.5rem 0rem;
 			}
-			.pj_info {
+			.pj_url {
+				color: #fb9073;
 				font-size: 1.2rem;
+				font-weight: 600;
+				cursor: pointer;
+			}
+			.pj_info {
+				font-size: 1rem;
 				padding: 1rem 0rem 1rem 0rem;
 			}
 			.pj_border_bottom{
@@ -263,6 +278,7 @@
 				display: flex;
 				justify-content: space-around;
 				margin: 0 auto;
+				padding: 0 0 4rem 0;
 		   }
 		   .licence_Img_Area{
 				max-width: 400px;
@@ -315,7 +331,7 @@
 				background-color:  rgb(129, 132, 134) !important;
 			}
 			.archiving_Area {
-				padding: 4rem 0rem;
+				padding: 1.3rem 0rem;
 				/* margin: 0 auto; */
 			}
 			.archiving_Box {
@@ -493,6 +509,11 @@
 				var url = $(this).find(".archiving_Title").data("url");
 				location.href= url;
 			});
+			//깃 저장소 영역 클릭
+			$("#archiving_Box2").on('click',function(){
+				var url = $(this).find(".archiving_Title").data("url");
+				location.href= url;
+			});
 			//헤더 메뉴 클릭
 			$(".inner_header_data").on('click',function(){
 				var location = $(this).data("location");
@@ -527,6 +548,10 @@
 				}, 800);
 				$("#mobile_header").hide()
 					is_Mobile_Menu=false;
+			});
+			$(".pj_url").on('click',function(e){
+				var url = $(e.currentTarget).data("url");
+				location.href= url;
 			});
 		});
 		</script>
@@ -570,7 +595,6 @@
 							<div class="typing"></div>
 						</div>
 					</div>
-
 					<!-- ABOUT ME -->
 					<div class="main_Box " id="About_Me">
 						<div class="main_Title">
@@ -667,8 +691,11 @@
 									<div class="skills_Long">
 										<img src="image/Skills/jquery.svg" class="skills_img">
 									</div>
-									<div class="skills">
-										<img src="image/Skills/bs.svg" class="skills_img">
+									<div class="skills_Long">
+										<img src="image/Skills/tailwind.svg" class="skills_img">
+									</div>
+									<div class="skills_Long">
+										<img src="image/Skills/nextjs.svg" class="skills_img">
 									</div>
 								</div>
 							</div>
@@ -704,6 +731,9 @@
 									<div class="skills_Long">
 										<img src="image/Skills/iis.png" class="skills_img">
 									</div>
+									<div class="skills_Long">
+										<img src="image/Skills/vercel.svg" class="skills_img">
+									</div>
 								</div>
 							</div>
 							<!-- 버전관리 -->
@@ -724,7 +754,7 @@
 								</div>
 							</div>
 							<!-- 모바일 -->
-							<div class="skills_box">
+							<!-- <div class="skills_box">
 								<div class="skills_Title_Wrap">
 									<div class="skills_Title">Mobile App</div>
 								</div>
@@ -733,7 +763,7 @@
 										<img src="image/Skills/cordova.png" class="skills_img">
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<!-- 프로젝트 -->
@@ -743,48 +773,87 @@
 							<div class="title_Txt font_weight_600 col_while">Projects</div>
 						</div>
 						<div class="pj_Area">
-							<!-- 1 -->
+							<!-- 0 -->
 							<div class="pj_box">
-								<div class="pj_left">
-									<div class="swiper mySwiper">
-										<div class="swiper-wrapper">
-											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_1.png" loading="lazy"></div>
-											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_2.png" loading="lazy"></div>
-											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_3.png" loading="lazy"></div>
-											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_4.png" loading="lazy"></div>
-											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_5.png" loading="lazy"></div>
+								<div>
+									<div class="pj_topTitle">[개인 프로젝트]<br/>next js , notion api</div>
+								</div>
+								<div class="pj_layoyt">
+									<div class="pj_left">
+										<div class="swiper mySwiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide"><img class="pjimg" src="image/pjimg_0_1.png" loading="lazy"></div>
+												<div class="swiper-slide"><img class="pjimg" src="image/pjimg_0_2.png" loading="lazy"></div>
+												<div class="swiper-slide"><img class="pjimg" src="image/pjimg_0_3.png" loading="lazy"></div>
+												<div class="swiper-slide"><img class="pjimg" src="image/pjimg_0_4.png" loading="lazy"></div>
+											</div>
+											<div class="swiper-pagination"></div>
 										</div>
-										<div class="swiper-pagination"></div>
+									</div>
+									<div class="pj_right">
+										<div class="pj_title">프렌차이즈 식당 닭둥지<br/> 홈페이지</div>
+										<div class="pj_url" data-url="https://닭둥지.shop">https://닭둥지.shop</div>
+										<div class="pj_info pj_border_bottom">주요작업 : 가맹신청, 가맹신청 확인처리 기능,디자인&퍼블리싱</div>
+										<div class="pj_info">지인에게 도움이 되기위해 시작한 프로젝트여서 뜻깊었고 next js프레임워크 개발을 통해 컴포넌트형 웹개발과 React Hooks 를 알게 되었습니다.
+											또한 데이터양이 많지 않을거라 판단, 무료인점을 보고 notion api를 통해 데이터를 insert, update, select 해보았는데 이런 경우 벡엔드 서버를 두지않아도
+											처리할 수 있어서 흥미로웠습니다.
+										</div>
 									</div>
 								</div>
-								<div class="pj_right">
-									<div class="pj_title">네트워크 마케팅 쇼핑몰 웹 개발<br/>(클라이언트,관리자)</div>
-									<div class="pj_info">주요작업(클라이언트) : 상품상세, 상품리뷰, 이벤트, 마이페이지 작업</div>
-									<div class="pj_info pj_border_bottom">주요작업(관리자) : 메인 대쉬보드,전시 카테고리 관리,회원관리 페이지 작업</div>
-									
-									<div class="pj_info">쇼핑몰 특성상 여러 DB table에 접근해 작업할 수 있어서 sql에 능숙해질 수 있었고 기본적인 CRUD부터
-										사용자 입력에 따른 Multi Record를 효율적인 방법으로 Insert&Update 했던 경험이 기억에 남습니다.
+							</div>
+							<!-- 1 -->
+							<div class="pj_box">
+								<div>
+									<div class="pj_topTitle">[Work Experience]<br/>asp.net , mysql</div>
+								</div>
+								<div class="pj_layoyt">
+									<div class="pj_left">
+										<div class="swiper mySwiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_1.png" loading="lazy"></div>
+												<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_2.png" loading="lazy"></div>
+												<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_3.png" loading="lazy"></div>
+												<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_4.png" loading="lazy"></div>
+												<div class="swiper-slide"><img class="pjimg" src="image/pjimg_1_5.png" loading="lazy"></div>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+									</div>
+									<div class="pj_right">
+										<a></a>
+										<div class="pj_title">네트워크 마케팅 쇼핑몰 웹 개발<br/>(클라이언트,관리자)</div>
+										<div class="pj_info">주요작업(클라이언트) : 상품상세, 상품리뷰, 이벤트, 마이페이지 작업</div>
+										<div class="pj_info pj_border_bottom">주요작업(관리자) : 메인 대쉬보드,전시 카테고리 관리,회원관리 페이지 작업</div>
+										
+										<div class="pj_info">쇼핑몰 특성상 여러 DB table에 접근해 작업할 수 있어서 sql에 능숙해질 수 있었고 기본적인 CRUD부터
+											사용자 입력에 따른 Multi Record를 효율적인 방법으로 Insert&Update 했던 경험이 기억에 남습니다.
+										</div>
 									</div>
 								</div>
 							</div>
 							<!-- 2 -->
 							<div class="pj_box">
-								<div class="pj_left">
-									<div class="swiper mySwiper">
-										<div class="swiper-wrapper">
-											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_1.png" loading="lazy"></div>
-											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_2.png" loading="lazy"></div>
-											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_3.png" loading="lazy"></div>
-											<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_4.png" loading="lazy"></div>
-										</div>
-										<div class="swiper-pagination"></div>
-									</div>
+								<div>
+									<div class="pj_topTitle">(Work Experience)<br/>asp.net , mysql</div>
 								</div>
-								<div class="pj_right">
-									<div class="pj_title">물류 서비스 웹 리뉴얼</div>
-									<div class="pj_info pj_border_bottom">주요작업 : 메인, 물류 서비스 소개, 스케줄 검색 페이지 작업</div>
-									<div class="pj_info">기존 웹을 리뉴얼 해보면서 UI/UX와 공통코드관리의 중요성을 체감할 수 있었고 Media Query를 통해
-										반응형 작업을 경험했습니다.
+								<div class="pj_layoyt">
+									<div class="pj_left">
+										<div class="swiper mySwiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_1.png" loading="lazy"></div>
+												<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_2.png" loading="lazy"></div>
+												<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_3.png" loading="lazy"></div>
+												<div class="swiper-slide"><img class="pjimg" src="image/pjimg_2_4.png" loading="lazy"></div>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+									</div>
+									<div class="pj_right">
+										<div class="pj_title">물류 서비스 웹 리뉴얼</div>
+										<div class="pj_info pj_border_bottom">주요작업 : 메인, 물류 서비스 소개, 스케줄 검색 페이지 작업</div>
+										<div class="pj_info">기존 웹을 리뉴얼 해보면서 UI/UX와 공통코드관리의 중요성을 체감할 수 있었고 Media Query를 통해
+											반응형 작업을 경험했습니다.
+										</div>
 									</div>
 								</div>
 							</div>
@@ -806,7 +875,7 @@
 								<div class="licence_txt col_while"id="Certificate_Target">발급 연월일 : 2022.11.30</div>
 							</div>
 						</div>
-						<!--  -->
+						<!-- 깃허브 -->
 						<div class="archiving_Area">
 							<div class="archiving_Box" id="archiving_Box">
 								<div class="archiving_Img_Wrap">
@@ -818,7 +887,20 @@
 									<div class="archiving_Info">■ 프로젝트, 프로그램의 소스</div>
 									<div class="archiving_Info">■ 혼자서 공부하는 알고리즘 소스</div>
 								</div>
-								
+							</div>
+						</div>
+						<!-- 티스토리 -->
+						<div class="archiving_Area">
+							<div class="archiving_Box" id="archiving_Box2">
+								<div class="archiving_Img_Wrap">
+									<img class="archiving_Img" src="image/Skills/tstory.png">
+								</div>
+								<div class="archiving_Info_Area">
+									<div class="archiving_Title" data-url="https://jung-hey98.tistory.com/">https://jung-hey98.tistory.com/</div>
+									<div class="archiving_Info"><span class="col_point">티스토리 </span>블로그입니다.</div>
+									<div class="archiving_Info">■ 알고리즘 이론, 문제풀이</div>
+									<div class="archiving_Info">■ 개발관련 경험 및 지식 공유</div>
+								</div>
 							</div>
 						</div>
 					</div>
